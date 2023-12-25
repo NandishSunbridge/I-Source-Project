@@ -11,7 +11,6 @@ tableextension 50008 "Sales Header Extension" extends "Sales Header"
         {
             Caption = 'T.A.N. No.';
             DataClassification = ToBeClassified;
-            TableRelation = "TAN Nos.";
         }
     }
 }

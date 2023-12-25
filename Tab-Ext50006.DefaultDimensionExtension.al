@@ -11,13 +11,16 @@ tableextension 50006 "Default Dimension Extension" extends "Default Dimension"
             begin
                 DefaultDimensionRec.Reset();
                 DefaultDimensionRec.SetRange("No.", Rec."No.");
-                if DefaultDimensionRec.Find() then begin
+                if DefaultDimensionRec.FindFirst() then begin
                     repeat
                         if DefaultDimensionRec."Dimension Code" = 'PROJECT' then begin
                             EmployeeRec.Reset();
                             EmployeeRec.SetRange("No.", Rec."No.");
-                            if EmployeeRec.FindFirst() then
+                            if EmployeeRec.FindFirst() then begin
                                 EmployeeRec.Billed := true;
+                            end else begin
+                                EmployeeRec.Billed := false;
+                            end;
                         end;
                     until DefaultDimensionRec.Next() = 0;
                 end;

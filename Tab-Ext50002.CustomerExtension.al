@@ -11,7 +11,6 @@ tableextension 50002 "Customer Extension" extends Customer
         {
             Caption = 'T.A.N. No.';
             DataClassification = ToBeClassified;
-            TableRelation = "TAN Nos.";
         }
     }
 }

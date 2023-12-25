@@ -8,6 +8,8 @@ pageextension 50001 "Vendor Card Extension" extends "Vendor Card"
             {
                 ApplicationArea = All;
                 ToolTip = 'Specifies the value of the Vendor Blocking Reason.';
+                Enabled = (Rec.Blocked <> Rec.Blocked::" ");
+                ShowMandatory = (Rec.Blocked <> Rec.Blocked::" ");
             }
         }
         addafter("Registration Number")

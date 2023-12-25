@@ -11,7 +11,6 @@ tableextension 50009 "Purchase Header Extension" extends "Purchase Header"
         {
             Caption = 'T.A.N. No.';
             DataClassification = ToBeClassified;
-            TableRelation = "TAN Nos.";
         }
     }
 }
