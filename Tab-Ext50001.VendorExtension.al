@@ -35,5 +35,10 @@ tableextension 50001 "Vendor Extension" extends Vendor
             Caption = 'MSME';
             DataClassification = ToBeClassified;
         }
+        field(50005; "CIN NO."; Code[21])
+        {
+            Caption = 'CIN NO.';
+            DataClassification = ToBeClassified;
+        }
     }
 }

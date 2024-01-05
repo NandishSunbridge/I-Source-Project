@@ -12,5 +12,10 @@ tableextension 50002 "Customer Extension" extends Customer
             Caption = 'T.A.N. No.';
             DataClassification = ToBeClassified;
         }
+        field(50002; "CIN NO."; Code[21])
+        {
+            Caption = 'CIN NO.';
+            DataClassification = ToBeClassified;
+        }
     }
 }

@@ -16,4 +16,36 @@ pageextension 50011 "Purchase Order Extension" extends "Purchase Order"
             }
         }
     }
+    actions
+    {
+        addlast(Category_Category10)
+        {
+            actionref("PurchaseOrderReport"; "Purchase Order Report")
+            {
+            }
+        }
+        addafter("&Print")
+        {
+            action("Purchase Order Report")
+            {
+                ApplicationArea = all;
+                Caption = 'Purchase Order Report';
+                Ellipsis = true;
+                Image = Report;
+                ToolTip = 'Prepare to print the document. The report request window for the document opens where you can specify what to include on the print-out.';
+                trigger OnAction()
+                var
+                    PurchaseorderReport: Report 50000;
+                begin
+                    PurchaseHeaderRec.Reset();
+                    PurchaseHeaderRec.SetRange("No.", Rec."No.");
+                    if PurchaseHeaderRec.FindFirst() then begin
+                        Report.Run(50000, false, true, PurchaseHeaderRec);
+                    end;
+                end;
+            }
+        }
+    }
+    var
+        PurchaseHeaderRec: Record "Purchase Header";
 }

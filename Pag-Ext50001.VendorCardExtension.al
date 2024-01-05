@@ -35,6 +35,11 @@ pageextension 50001 "Vendor Card Extension" extends "Vendor Card"
                 ApplicationArea = All;
                 ToolTip = 'Specifies the value of the T.A.N No. field.';
             }
+            field("CIN NO."; Rec."CIN NO.")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the CIN NO. field.';
+            }
         }
 
     }
