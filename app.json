@@ -15,19 +15,19 @@
       "id": "d3c551dd-5903-4194-b153-04ced9d29a2c",
       "name": "India Tax Base",
       "publisher": "Microsoft",
-      "version": "23.1.13431.13546"
+      "version": "23.2.14098.14274"
     },
     {
       "id": "eae5779e-7797-4c4c-977e-7516652b7a65",
       "name": "India TDS",
       "publisher": "Microsoft",
-      "version": "23.1.13431.13546"
+      "version": "23.2.14098.14274"
     },
     {
       "id": "eddcf82e-482c-49d1-836b-ad0284f2c5b0",
       "name": "India TCS",
       "publisher": "Microsoft",
-      "version": "23.1.13431.13546"
+      "version": "23.2.14098.14274"
     },
     {
       "id": "db643212-b7fb-4dd4-b5a8-cb44ac714461",
@@ -39,7 +39,7 @@
       "id": "c1eafb3f-e397-468e-bdb4-ecc5c317ca00",
       "name": "Tax Engine",
       "publisher": "Microsoft",
-      "version": "23.1.13431.13546"
+      "version": "23.2.14098.14274"
     }
   ],
   "screenshots": [],

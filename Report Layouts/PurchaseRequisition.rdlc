@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="txt">
+          <DataField>txt</DataField>
+        </Field>
+        <Field Name="LocName">
+          <DataField>LocName</DataField>
+        </Field>
+        <Field Name="LocAddress">
+          <DataField>LocAddress</DataField>
+        </Field>
+        <Field Name="LocAddress2">
+          <DataField>LocAddress2</DataField>
+        </Field>
+        <Field Name="PRH_RequirementType">
+          <DataField>PRH_RequirementType</DataField>
+        </Field>
+        <Field Name="PRH_RequisitionType">
+          <DataField>PRH_RequisitionType</DataField>
+        </Field>
+        <Field Name="lbl_ReportName">
+          <DataField>lbl_ReportName</DataField>
+        </Field>
+        <Field Name="PRH_Branch">
+          <DataField>PRH_Branch</DataField>
+        </Field>
+        <Field Name="PRH_Unit">
+          <DataField>PRH_Unit</DataField>
+        </Field>
+        <Field Name="PRH_LocationCode">
+          <DataField>PRH_LocationCode</DataField>
+        </Field>
+        <Field Name="PRH_DocumentNo">
+          <DataField>PRH_DocumentNo</DataField>
+        </Field>
+        <Field Name="PRH_DocumentDate">
+          <DataField>PRH_DocumentDate</DataField>
+        </Field>
+        <Field Name="IndentType">
+          <DataField>IndentType</DataField>
+        </Field>
+        <Field Name="PRH_DeptCode">
+          <DataField>PRH_DeptCode</DataField>
+        </Field>
+        <Field Name="PRH_FAIdentificationNo">
+          <DataField>PRH_FAIdentificationNo</DataField>
+        </Field>
+        <Field Name="PRH_FixedAssetsCode">
+          <DataField>PRH_FixedAssetsCode</DataField>
+        </Field>
+        <Field Name="PRH_Justification">
+          <DataField>PRH_Justification</DataField>
+        </Field>
+        <Field Name="PRH_Comments">
+          <DataField>PRH_Comments</DataField>
+        </Field>
+        <Field Name="PRH_TotalAmount">
+          <DataField>PRH_TotalAmount</DataField>
+        </Field>
+        <Field Name="PRH_TotalAmountFormat">
+          <DataField>PRH_TotalAmountFormat</DataField>
+        </Field>
+        <Field Name="PRH_DeptName">
+          <DataField>PRH_DeptName</DataField>
+        </Field>
+        <Field Name="PreparedBy">
+          <DataField>PreparedBy</DataField>
+        </Field>
+        <Field Name="ApprovedBy">
+          <DataField>ApprovedBy</DataField>
+        </Field>
+        <Field Name="SlNo">
+          <DataField>SlNo</DataField>
+        </Field>
+        <Field Name="PRL_Type">
+          <DataField>PRL_Type</DataField>
+        </Field>
+        <Field Name="PRL_ItemNo">
+          <DataField>PRL_ItemNo</DataField>
+        </Field>
+        <Field Name="PRL_Description">
+          <DataField>PRL_Description</DataField>
+        </Field>
+        <Field Name="PRL_PartDescription">
+          <DataField>PRL_PartDescription</DataField>
+        </Field>
+        <Field Name="PRL_UOM">
+          <DataField>PRL_UOM</DataField>
+        </Field>
+        <Field Name="PRL_StockinHand">
+          <DataField>PRL_StockinHand</DataField>
+        </Field>
+        <Field Name="PRL_StockinHandFormat">
+          <DataField>PRL_StockinHandFormat</DataField>
+        </Field>
+        <Field Name="PRL_HSNSAC">
+          <DataField>PRL_HSNSAC</DataField>
+        </Field>
+        <Field Name="PRL_GPPG">
+          <DataField>PRL_GPPG</DataField>
+        </Field>
+        <Field Name="PRL_MonthlyConsumption">
+          <DataField>PRL_MonthlyConsumption</DataField>
+        </Field>
+        <Field Name="PRL_MonthlyConsumptionFormat">
+          <DataField>PRL_MonthlyConsumptionFormat</DataField>
+        </Field>
+        <Field Name="PRL_LastQuantity">
+          <DataField>PRL_LastQuantity</DataField>
+        </Field>
+        <Field Name="PRL_LastQuantityFormat">
+          <DataField>PRL_LastQuantityFormat</DataField>
+        </Field>
+        <Field Name="PRL_LastRate">
+          <DataField>PRL_LastRate</DataField>
+        </Field>
+        <Field Name="PRL_LastRateFormat">
+          <DataField>PRL_LastRateFormat</DataField>
+        </Field>
+        <Field Name="PRL_LastPurDate">
+          <DataField>PRL_LastPurDate</DataField>
+        </Field>
+        <Field Name="prl_SuppliersCode">
+          <DataField>prl_SuppliersCode</DataField>
+        </Field>
+        <Field Name="PRL_PurchaseRate">
+          <DataField>PRL_PurchaseRate</DataField>
+        </Field>
+        <Field Name="PRL_PurchaseRateFormat">
+          <DataField>PRL_PurchaseRateFormat</DataField>
+        </Field>
+        <Field Name="PRL_IndentQuqntity">
+          <DataField>PRL_IndentQuqntity</DataField>
+        </Field>
+        <Field Name="PRL_IndentQuqntityFormat">
+          <DataField>PRL_IndentQuqntityFormat</DataField>
+        </Field>
+        <Field Name="PRL_RequiredDate">
+          <DataField>PRL_RequiredDate</DataField>
+        </Field>
+        <Field Name="Bline">
+          <DataField>Bline</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
